@@ -499,28 +499,27 @@ section {
   position: absolute;
   top: 24px;
   right: 24px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #9747ff;
+  border: 1px;
   border-radius: 50%;
   background-color: #e7e9fc;
-  color: #1111;
+  fill: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.modal-icon {
+  border-radius: 4px;
+
+  width: 8px;
+  height: 8px;
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
   fill: #fff;
-}
-
-.modal-icon {
-  border-radius: 4px;
-  fill: #e7e9fc;
-  stroke-width: 1px;
 }
 
 .modal-caption {
@@ -605,13 +604,13 @@ section {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #fff;
   cursor: pointer;
   min-width: 169px;
   height: 56px;
   margin-right: auto;
   margin-left: auto;
   border: none;
+  color: #fff;
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
