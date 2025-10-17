@@ -61,7 +61,9 @@
       <section class="section-hero">
         <div class="container hero-container">
           <h1 class="section-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -476,7 +478,105 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-form-title">Subscribe</p>
+          <form class="footer-form">
+            <label class="visually-hidden" for="subscribe_email"
+              >User email</label
+            >
+            <div class="footer-form-wrapper">
+              <input
+                class="footer-form-input"
+                type="email"
+                id="subscribe_email"
+                placeholder="E-mail"
+              />
+              <button class="footer-form-btn" type="button">
+                Subscribe
+                <svg class="footer-form-btn-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-Frame"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
+    <!--Modal Window-->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-caption">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form" name="review" autocomplete="off" novalidate>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_name">Name</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-input" type="text" id="user_name" />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_phone">Phone</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-input" type="tel" id="user_phone" />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_email">Email</label>
+            <div class="modal-form-wrapper">
+              <input class="modal-form-input" type="email" id="user_email" />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_comment">Comment</label>
+            <textarea
+              class="modal-form-message"
+              id="user_comment"
+              name="user_comment"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+
+          <div class="form-agreement">
+            <input
+              class="checkbox visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+              id="user-agreement"
+              checked
+            />
+            <label class="agreement-wrapper" for="user-agreement">
+              <span class="agreement-checkbox">
+                <svg class="agreement-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="agreement-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="form-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
