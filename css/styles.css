@@ -507,7 +507,7 @@ section {
   background-color: #e7e9fc;
   fill: #2e2f42;
   cursor: pointer;
-  border: solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -516,12 +516,14 @@ section {
   border-radius: 4px;
   width: 8px;
   height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
   fill: #fff;
+  border: none;
 }
 
 .modal-caption {
@@ -657,12 +659,12 @@ section {
   line-height: 1.17;
 }
 
-input[type="checkbox"]:checked + .agreement-wrapper > .agreement-checkbox {
+input[type="checkbox"]:checked + .agreement-wrapper > span {
   background-color: #404bbf;
-  border-radius: 2px;
   fill: #f4f4fd;
   border: none;
 }
+
 .agreement-link {
   line-height: 1.33;
   text-decoration: underline;
@@ -702,12 +704,18 @@ input[type="checkbox"]:checked + .agreement-wrapper > .agreement-checkbox {
 
 .footer-form-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
   background: #4d5ae5;
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -716,5 +724,6 @@ input[type="checkbox"]:checked + .agreement-wrapper > .agreement-checkbox {
   background-color: #404bbf;
 }
 .footer-form-btn-icon {
+  margin-left: 16px;
   fill: #f4f4fd;
 }
