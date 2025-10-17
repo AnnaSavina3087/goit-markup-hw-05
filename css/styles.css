@@ -659,7 +659,7 @@ section {
   line-height: 1.17;
 }
 
-input[type="checkbox"]:checked + .agreement-wrapper > span {
+.agreement-checkbox-input:checked + .agreement-wrapper .agreement-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
