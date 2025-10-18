@@ -700,11 +700,14 @@ input[type="checkbox"]:checked + .agreement-wrapper > .agreement-checkbox {
   border-color: #31d0aa;
 }
 
+.footer-form-input::placeholder {
+  color: #fff;
+}
+
 .footer-form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
   min-width: 165px;
